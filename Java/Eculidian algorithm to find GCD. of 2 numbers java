@@ -1,0 +1,23 @@
+import java.util.*;
+class GCD{
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the first number: ");
+    int a = sc.nextInt();
+    System.out.println("Enter the second number: ");
+    int b = sc.nextInt();
+    System.out.println("The GCD of "+a+" and "+b+" is: "+EuclideanAlgo(a,b));
+  }
+  static int EuclideanAlgo(int a, int b){
+    int r = 0;
+    if(b==0) return a;
+    else{
+      while(a%b > 0){
+      r = a%b;
+      a = b;
+      b = r;
+      }
+    }
+    return b;
+  }
+}
